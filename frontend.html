@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Store</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="formCheck.js"></script>
+  </head>
+
+  <body>
+    <h1>Welcome to Online Coffee Shop!</h1>
+    <form class="store" onSubmit ="return Validate(this)" action="backend.php" method="post">
+      <table id="items" align="center">
+        <tr>
+          <td>
+            <div class="item">
+              <h2>Coffee</h2>
+              <p id="amount">$2</p>
+              <br>Quantity<input type="text" name="coffee" value="0">
+            </div>
+          </td>
+          <td>
+            <div class="item">
+              <h2>Latte</h2>
+              <p id="amount">$4</p>
+              <br>Quantity<input type="text" name="latte" value="0">
+            </div>
+          </td>
+          <td>
+            <div class="item">
+              <h2>Scone</h2>
+              <p id="amount">$3</p>
+              <br>Quantity<input type="text" name="scone" value="0">
+            </div>
+          </td>
+        </tr>
+      </table><br>
+      <div class="user">
+      Username:<input id = "username" type="text" name="username"><br>
+      Password:<input id="password" type="password" name="password" ><br>
+      </div>
+      <div class="shipping">
+        Select your shipping method:<br>
+        <input type="radio" name="sMethod" value="0" checked="checked">
+        Free 7 day<br>
+        <input type="radio" name="sMethod" value="50">
+        $50.00 over night<br>
+        <input type="radio" name="sMethod" value="5">
+        $5.00 three day<br>
+      </div>
+      <input type="submit" value="submit">
+    </form>
+  </body>
+</html>
